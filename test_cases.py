@@ -84,6 +84,11 @@ def test_sigmoid_(f):
         for val, expected in zip(lst, expected_lst):
             assert val - expected < 0.00001
 
+def test_abs_(f):
+    assert f(5) == 5
+    assert f([-1, 2, -3]) == [1, 2, 3]
+    assert f([[1, -2], [3, -4]]) == [[1, 2], [3, 4]]
+
 def test_neg_(f):
     assert f(5) == -5
     assert f([5, 3]) == [-5, -3]
